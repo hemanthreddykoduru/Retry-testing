@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import { useRouter } from 'next/navigation';
 import DemoBanner from '@/components/DemoBanner';
 import { products } from '@/lib/products';
@@ -8,11 +8,12 @@ import { ArrowLeft, Loader2 } from 'lucide-react';
 import Link from 'next/link';
 import Script from 'next/script';
 
-export default function CheckoutPage({ params }: { params: { productId: string } }) {
+export default function CheckoutPage({ params }: { params: Promise<{ productId: string }> }) {
   const router = useRouter();
   const [loading, setLoading] = useState(false);
+  const resolvedParams = React.use(params);
   
-  const product = products.find(p => p.id === params.productId);
+  const product = products.find(p => p.id === resolvedParams.productId);
 
   if (!product) {
     return (
@@ -145,7 +146,7 @@ export default function CheckoutPage({ params }: { params: { productId: string }
           </button>
           
           <p className="text-center text-sm text-gray-500 mt-4">
-            Use <strong className="text-gray-800">failure@razorpay</strong> or <strong className="text-gray-800">success@razorpay</strong> for UPI tests.
+            Use <strong>Netbanking</strong> and click the <strong>Fail</strong> button on the bank page to trigger a recovery case.
           </p>
         </div>
       </main>

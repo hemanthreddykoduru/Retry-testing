@@ -10,15 +10,14 @@ export default function TestModeInstructions() {
       
       <ol className="list-decimal list-inside space-y-3 text-blue-800">
         <li>Pick any demo product and click <strong>Pay with Razorpay Test Mode</strong>.</li>
-        <li>Select <strong>UPI</strong> as the payment method.</li>
+        <li>Select <strong>Netbanking</strong> as the payment method.</li>
+        <li>Select any test bank and click <strong>Pay Now</strong>.</li>
         <li>
-          To create a failed payment, enter: <br/>
-          <code className="bg-white px-2 py-1 rounded border border-blue-200 mt-1 inline-block font-bold">failure@razorpay</code>
+          On the Razorpay bank simulator page, click the red <strong>Fail</strong> button to simulate a bank downtime drop-off.
         </li>
-        <li>Return to this page and open the Retry recovery dashboard to see the captured event.</li>
+        <li>Return to the Retry dashboard to watch the AI recovery case generate instantly!</li>
         <li>
-          To test a successful payment, repeat using: <br/>
-          <code className="bg-white px-2 py-1 rounded border border-blue-200 mt-1 inline-block font-bold">success@razorpay</code>
+          To test a successful payment, repeat the process but click the green <strong>Success</strong> button instead.
         </li>
       </ol>
     </div>
