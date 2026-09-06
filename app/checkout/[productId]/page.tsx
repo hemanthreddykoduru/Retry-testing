@@ -65,11 +65,6 @@ export default function CheckoutPage({ params }: { params: Promise<{ productId: 
         name: "Retry Checkout Lab",
         description: product.name,
         order_id: orderData.id,
-        prefill: {
-          name: "Judge Tester",
-          email: "judge@buildathon.demo",
-          contact: "9999999999",
-        },
         handler: async function (response: any) {
           // Verify payment on server
           const verifyRes = await fetch('/api/verify-payment', {
