@@ -1,4 +1,4 @@
-# Retry Checkout Lab
+# Retry-testing
 
 A zero-login Razorpay Test Mode storefront for demonstrating failed-payment detection and AI-assisted revenue recovery.
 
@@ -6,10 +6,11 @@ A zero-login Razorpay Test Mode storefront for demonstrating failed-payment dete
 
 1. Pick any demo product.
 2. Click **Pay with Razorpay Test Mode**.
-3. Select **UPI**.
-4. Enter `failure@razorpay` to create a failed payment.
-5. Return here and open the Retry recovery dashboard.
-6. Repeat using `success@razorpay` to test a successful payment.
+3. Select **Netbanking**.
+4. Select any test bank and click **Pay Now**.
+5. On the Razorpay simulator page, click **Fail** to simulate downtime.
+6. Return here and open the Retry recovery dashboard.
+7. Repeat using the **Success** button to test a successful payment.
 
 ## Disclaimer
 
